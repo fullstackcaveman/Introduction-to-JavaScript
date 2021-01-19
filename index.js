@@ -202,7 +202,7 @@ Using the annoyingSong function below do the following:
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
-
+let i = 99;
 function annoyingSong(i) {
 	while (i > 0) {
 		return (

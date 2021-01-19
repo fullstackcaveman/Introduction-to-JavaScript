@@ -162,8 +162,42 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+const userGuess = Math.floor(Math.random() * 3);
+const computerGuess = Math.floor(Math.random() * 3);
+
+let user =
+	userGuess === 0
+		? 'rock'
+		: userGuess === 1
+		? 'paper'
+		: userGuess === 2
+		? 'scissors'
+		: null;
+let computer =
+	computerGuess === 0
+		? 'rock'
+		: computerGuess === 1
+		? 'paper'
+		: computerGuess === 2
+		? 'scissors'
+		: null;
+
 function game(user, computer) {
-	/*add your code here*/
+	if (
+		(user === 'rock' && computer === 'scissors') ||
+		(user === 'paper' && computer === 'rock') ||
+		(user === 'scissors' && computer === 'paper')
+	) {
+		return 'you win!';
+	} else if (
+		(user === 'rock' && computer === 'paper') ||
+		(user === 'paper' && computer === 'scissors') ||
+		(user === 'scissors' && computer === 'rock')
+	) {
+		return 'you lose!';
+	} else {
+		return "it's a tie";
+	}
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/

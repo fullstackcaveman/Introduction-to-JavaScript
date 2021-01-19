@@ -165,24 +165,30 @@ Use the game function below to do the following:
 const userGuess = Math.floor(Math.random() * 3);
 const computerGuess = Math.floor(Math.random() * 3);
 
-let user =
-	userGuess === 0
-		? 'rock'
-		: userGuess === 1
-		? 'paper'
-		: userGuess === 2
-		? 'scissors'
-		: null;
-let computer =
-	computerGuess === 0
-		? 'rock'
-		: computerGuess === 1
-		? 'paper'
-		: computerGuess === 2
-		? 'scissors'
-		: null;
+let user = () => {
+	if (userGuess === 0) {
+		return 'rock';
+	} else if (userGuess === 1) {
+		return 'paper';
+	} else {
+		return 'scissors';
+	}
+};
+console.log(user());
+
+let computer = () => {
+	if (computerGuess === 0) {
+		return 'rock';
+	} else if (computerGuess === 1) {
+		return 'paper';
+	} else {
+		return 'scissors';
+	}
+};
+console.log(computer());
 
 function game(user, computer) {
+	console.log(user, computer);
 	if (
 		(user === 'rock' && computer === 'scissors') ||
 		(user === 'paper' && computer === 'rock') ||
@@ -199,6 +205,8 @@ function game(user, computer) {
 		return "it's a tie";
 	}
 }
+
+console.log(game());
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 

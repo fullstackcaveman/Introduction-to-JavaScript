@@ -188,7 +188,7 @@ let computer = () => {
 console.log(computer());
 
 function game(user, computer) {
-	console.log(user, computer);
+	// console.log(user, computer);
 	if (
 		(user === 'rock' && computer === 'scissors') ||
 		(user === 'paper' && computer === 'rock') ||

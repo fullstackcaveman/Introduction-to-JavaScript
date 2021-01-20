@@ -205,8 +205,7 @@ function game(user, computer) {
 		return "it's a tie";
 	}
 }
-
-console.log(game());
+game(user(), computer());
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
